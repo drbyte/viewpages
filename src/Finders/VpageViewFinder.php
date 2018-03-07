@@ -73,6 +73,8 @@ class VpageViewFinder implements ViewFinderInterface
         // Ignore namespaces
     }
 
+    public function replaceNamespace($namespace, $hints){}
+
     /**
      * Add a valid view extension to the finder.
      *
@@ -83,4 +85,5 @@ class VpageViewFinder implements ViewFinderInterface
     {
         // Ignore extensions
     }
+    public function flush() {}
 }

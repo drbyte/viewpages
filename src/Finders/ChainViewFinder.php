@@ -102,6 +102,22 @@ class ChainViewFinder implements ViewFinderInterface
             }
         }
     }
+    /**
+     *
+     * @param  string  $namespace
+     * @param  string|array  $hints
+     * @return void
+     */
+    public function replaceNamespace($namespace, $hints)
+    {
+        /** @var ViewFinderInterface $viewFinder */
+        foreach ($this->viewFinders as $viewFinder) {
+            try {
+                $viewFinder->replaceNamespace($namespace, $hints);
+            } catch (\Exception $e) {
+            }
+        }
+    }
 
     /**
      * Add a valid view extension to the finder.
@@ -119,4 +135,5 @@ class ChainViewFinder implements ViewFinderInterface
             }
         }
     }
+    public function flush(){}
 }
