@@ -30,7 +30,7 @@ class CarouselImage extends GenericNode
      */
     public function carousels()
     {
-        return $this->belongsToMany('\Delatbabel\ViewPages\Models\Carousel', 'carousel_carouselimage', 'carouselimage_id', 'carousel_id');
+        return $this->belongsToMany(\Delatbabel\ViewPages\Models\Carousel::class, 'carousel_carouselimage', 'carouselimage_id', 'carousel_id');
     }
 
     /**

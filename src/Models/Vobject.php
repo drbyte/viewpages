@@ -44,7 +44,7 @@ class Vobject extends Model
      */
     public function websites()
     {
-        return $this->belongsToMany('\Delatbabel\SiteConfig\Models\Website');
+        return $this->belongsToMany(\Delatbabel\SiteConfig\Models\Website::class);
     }
 
     /**
@@ -54,7 +54,7 @@ class Vobject extends Model
      */
     public function category()
     {
-        return $this->belongsTo('\Delatbabel\NestedCategories\Models\Category');
+        return $this->belongsTo(\Delatbabel\NestedCategories\Models\Category::class);
     }
 
     /**

@@ -33,7 +33,7 @@ class Carousel extends Model
      */
     public function carouselimages()
     {
-        return $this->belongsToMany('\Delatbabel\ViewPages\Models\CarouselImage', 'carousel_carouselimage', 'carousel_id', 'carouselimage_id');
+        return $this->belongsToMany(\Delatbabel\ViewPages\Models\CarouselImage::class, 'carousel_carouselimage', 'carousel_id', 'carouselimage_id');
     }
 
     /**
@@ -84,7 +84,7 @@ class Carousel extends Model
      */
     public function publicCarouselImages()
     {
-        return $this->belongsToMany('\Delatbabel\ViewPages\Models\CarouselImage', 'carousel_carouselimage', 'carousel_id', 'carouselimage_id')
+        return $this->belongsToMany(\Delatbabel\ViewPages\Models\CarouselImage::class, 'carousel_carouselimage', 'carousel_id', 'carouselimage_id')
             ->where('status', 'active')->orderBy('lft', 'desc');
     }
 }
